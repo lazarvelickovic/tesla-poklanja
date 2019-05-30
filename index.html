@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tesla poklanja</title>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="stylesheet" href="stylesheet/style.css">
+</head>
+<body>
+    <!-- Header -->
+
+    <header>
+        <!-- Nav bar -->
+
+        <nav>
+            <div class="logo">
+                <a href="#"><img src="images/logo.png" alt="Logo"></a>     
+            </div>
+
+            <div class="nav-links">
+                <a href="#">LINK1</a>
+                <a href="#">LINK2</a>
+                <a href="#">LINK3</a>
+            </div>
+        </nav>
+
+        <!-- Start section -->
+
+        <div>
+            <div class="start-section-box">
+                <div>
+                    <h3>GRATIS TABLET ZA PRVIH 100</h3>
+                    <img src="images/sto-da-ne-naslov.png" alt="Sto da ne">
+                    <p>Budite među prvih 100 kupaca Tesla Smartphone-a 9.2, jer na poklon dobijate Tesla Tablet L7.1!</p>
+                    <p class="p-bold">Dva uređaja po ceni jednog — pa STO da ne?</p>
+                    <a href="#">Smartphone 9.2</a>
+                </div>
+
+                <div>
+                    <img src="images/telefon-tablet.png" alt="Telefon-tablet">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main content -->
+
+    <main>
+
+        <!-- Form section -->
+
+        <section class="form-section">
+            <div class="form-section-box">
+                <h2>OSTAVI SVOJE PODATKE</h2>
+                <hr>
+
+                <form action="#">
+                    <div>
+                        <input type="date" name="date" id="date" placeholder="Dan i datum">
+                        <input type="email" name="email" id="email" placeholder="Email">
+
+                        <div class="recaptcha">
+                            <div class="g-recaptcha" data-sitekey="6LcePAATAAAAAGPRWgx90814DTjgt5sXnNbV5WaW"></div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <input type="text" id="imei" placeholder="IMEI">
+                        <textarea name="message" id="message" cols="30" rows="10">Komentar</textarea>
+                    </div>        
+                </form>
+
+                <button id="submit">POŠALJI</button>
+            </div>
+        </section>
+    </main>
+
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src="main.js"></script>
+</body>
+</html>
