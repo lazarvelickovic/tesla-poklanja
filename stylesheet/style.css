@@ -19,6 +19,10 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 /* Make sure to set some focus styles for accessibility */
 :focus {
     outline: 0;
@@ -32,7 +36,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
     line-height: 1;
-    font-family: 'Roboto'; 
+    font-family: 'Roboto';
 }
 
 a {
@@ -76,13 +80,6 @@ nav a:hover {
 .start-section-box div {
     width: 46%;
 }
-
-@media only screen and (max-width: 924px) {
-    .start-section-box div {
-        width: 50.5%;
-        margin: 0 auto;
-    }
-  }
 
 .start-section-box div:first-child {
     align-self: center;
@@ -151,20 +148,36 @@ nav a:hover {
     display: -webkit-flex;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.form-section-box form div {
-    width: 46%;
+.form-section-box form .form-colon {
+    width: 47%;
 }
 
 .form-section-box form input, textarea {
     display: block;
     width: 100%;
     padding: 12px;
-    margin: 20px;
+    margin: 20px 0;
     background-color: #01025e;
     color: #fff;
     border: none;
+}
+
+.form-section-box .date-box {
+    position: relative;
+    width: 100%;
+}
+
+.form-section-box .date-span {
+    position: absolute;
+    color: #fff;
+    top: 0;
+    left: 0;
+    display: inline-block;
+    padding: 14px 12px;
+    background-color: #01025e;
 }
 
 .form-section-box form input::placeholder {
@@ -173,14 +186,56 @@ nav a:hover {
 
 .form-section-box .recaptcha {
     float: right;
-    margin-right: 4.5%;
+}
+
+.form-section-box .imei-box {
+    position: relative;
+    width: 100%;
+}
+
+.form-section-box .pomoc {
+    display: inline-block;
+    position: absolute;
+    color: #505dff;
+    top: 12px;
+    right: 12px;
+    cursor: pointer;
+}
+
+.form-section-box .tooltip {
+    display: none;
+    width: 150px;
+    background-color: #4d4f88;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 120%;
+    right:  -6.8%;
+    margin-left: -60px;
+}
+
+.form-section-box .tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #4d4f88 transparent;
+}
+
+.form-section-box .pomoc:hover ~ .tooltip {
+    display: inline-block;
 }
 
 .form-section-box button {
     display: inline-block;
     margin-top: 30px;
     color: #fff;
-    padding: 10px 40px;
+    padding: 12px 40px;
     background-color: #ff8601;
     border: none;
     cursor: pointer;
@@ -190,5 +245,36 @@ nav a:hover {
     background-color: #fff;
     color: #ff8601;
     transition: all ease 1s;
+}
+
+@media only screen and (max-width: 924px) {
+    .start-section-box {
+        width: 55%;
+    }
+
+    .start-section-box div {
+        width: 50.5%;
+        margin: 0 auto;
+    }
+
+    .start-section-box div h3 {
+        font-size: 16px;
+    }
+
+    .start-section-box div:last-child {
+        margin-top: 30px;
+    }
+
+    .start-section-box div a {
+        padding: 10px 20px;
+    }
+
+    .form-section-box {
+        width: 55%;
+    }
+
+    .form-section-box form .form-colon {
+        width: 100%;
+    }
 }
 
